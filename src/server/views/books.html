@@ -1,0 +1,19 @@
+{% extends 'layoutside.html' %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+
+                <div class="row">
+                    <div class="col-lg-10">
+                        <h1>Books</h1>
+                        {% for item in array %}
+                        <p>{{item.title}}</p>
+                        <p>{{item.genre}}</p>
+                        <p>{{item.description}}</p>
+                        <p>{{item.coveryurl}}</p>
+                        {% endfor %}
+                    </div>
+                </div>
+
+{% endblock %}
