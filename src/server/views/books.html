@@ -8,10 +8,12 @@
                     <div class="col-lg-10">
                         <h1>Books</h1>
                         {% for item in array %}
-                        <p>{{item.title}}</p>
+                        <p><img src="{{item.coverurl}}" class="small_book" /></p>
+                        <p><h4>{{item.title}}</h4></p>
                         <p>{{item.genre}}</p>
+                        <p><strong>Author:</strong> {{item.firstname}} {{item.lastname}}</p>
                         <p>{{item.description}}</p>
-                        <p>{{item.coveryurl}}</p>
+                        <p class="clear"></p>
                         {% endfor %}
                     </div>
                 </div>

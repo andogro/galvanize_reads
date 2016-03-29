@@ -1,0 +1,26 @@
+{% extends 'layoutside.html' %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+
+                <div class="row">
+                    <div class="col-lg-10">
+                        <h1>Books</h1>
+                        <p><img src="{{array[0].coverurl}}" class="small_book" /></p>
+                        <p><h4>{{array[0].title}}</h4></p>
+                        <p>{{item.genre}}</p>
+                        {% if loop.first %}<p><strong>Author</strong>{% endif %}
+                        {% for item in array %} 
+                        {{item.firstname}} {{item.lastname}}<br />
+                        {% endfor %}
+                        </p>                        
+                        <p>{{array[0].description}}</p>
+                        <form method ="post">
+                        <p> <input type="submit" value="Delete This Book" class="btn btn-warning"></p>
+                        </form>
+                        <p class="clear"></p>
+                    </div>
+                </div>
+
+{% endblock %}
