@@ -12,6 +12,15 @@ a {
  height: 40px;
 }
 
+.navbar-header {
+  height: 60px;
+}
+
+.navbar-brand {
+  float: left;
+  margin-top: -20px;
+}
+
 /*Home Page Widgets*/
 
 .hero-widget { text-align: center; padding-top: 20px; padding-bottom: 20px; }
