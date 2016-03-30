@@ -8,14 +8,24 @@
                     <div class="col-lg-10">
                         <h1>Books</h1>
                         {% for item in array %}
-                        <p><img src="{{item.coverurl}}" class="small_book" /></p>
-                        <p><h4>{{item.title}}</h4></p>
-                        <p>{{item.genre}}</p>
-                        <p><strong>Author:</strong> {{item.firstname}} {{item.lastname}}</p>
-                        <p>{{item.description}}</p>
-                        <p class="clear"></p>
+                        <div class = "test">
+                            <p><img src="{{item.coverurl}}" class="small_book" />
+                            </p>
+                            <p><h4><a href="/books/{{item.book_id}}">{{item.title}}</a></h4></p>
+                            <p>{{item.genre}}</p>
+                            <p>Author: {{item.name}}
+                            {% for author in authorarray %}
+                              {% if author.book_id == item.book_id %}
+                              {{author.name}}
+                              {% endif %}
+                            {% endfor %}
+                            </p>
+                            <p>{{item.description}}</p>
+                            <p class="clear"></p>
+                        </div>
                         {% endfor %}
                     </div>
                 </div>
 
 {% endblock %}
+
